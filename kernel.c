@@ -14,12 +14,8 @@ void kernel_main()
         cc=starts();
         
         while(1){
-            i=1;
-            while(i){
-               ii=inportl(0x60);
-               if(ii>128)i=0;
-            }
-            gputc(xx,yy,keymap[ii & 127]);
+            i=inkeys();
+            gputc(xx,yy,i);
             redraw();
             xx=xx+10;
             if (xx>600){
@@ -27,10 +23,7 @@ void kernel_main()
                 yy=yy+10;
             }
             i=1;
-            while(i){
-               ii=inportl(0x60);
-               if(ii<128)i=0;
-            }
+            keystop();
 
         }
         redraw();

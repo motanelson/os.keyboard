@@ -6150,7 +6150,33 @@ void cats(char *cc,char *ccc) {
     }
                 
 }
+unsigned char getkey(){
+    int i=inportl(0x60);
+    if(i<128)return 255;
+    i=keymap[i & 127];
+    return i;
 
+}
+unsigned char inkeys(){
+    int i=0;
+     
+    while(1){
+        i=getkey();
+        if(i!=255)return i;
+    }
+
+
+}
+void keystop(){
+    int i=0;
+     
+    while(1){
+        i=getkey();
+        if(i==255)break;
+    }
+
+
+}
 char  *starts(){
     keymap=(char *)"==1234567890-===qwertyuiop====asdfghjkl====\\zxcvbnm,.;/==== ";
     rdfs_start=(char *)rdfs_txt;

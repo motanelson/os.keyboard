@@ -12,7 +12,7 @@ int xxx=0;
 int yyy=0;
 int zzz=0;
 int video;
- char *keymap="==1234567890-===qwertyuiop====asdfghjkl====\\zxcvbnm,.;/==== ";
+ char *keymap="==1234567890-===qwertyuiop5678asdfghjkl1234\\zxcvbnm,.;/9abc               ";
  volatile unsigned int *timerss;
 static double PI = 3.141592653589793;
 static unsigned char *memoryStart;
@@ -6178,7 +6178,7 @@ void keystop(){
 
 }
 char  *starts(){
-    keymap=(char *)"==1234567890-===qwertyuiop====asdfghjkl====\\zxcvbnm,.;/==== ";
+    keymap=(char *)"\033=1234567890-===qwertyuiop==\n=asdfghjkl====\\zxcvbnm,.;/                                                ";
     rdfs_start=(char *)rdfs_txt;
     return (char *)rdfs_start;
 

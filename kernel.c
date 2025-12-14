@@ -11,19 +11,15 @@ void kernel_main()
         int indexs=0;
         int i=1;
         int ii=0;
+        char c[1024];
+        char *ci=c;
         cc=starts();
         
         while(1){
-            i=inkeys();
-            gputc(xx,yy,i);
+            inputs(ci);
+            gputs(10,cursy,ci);
             redraw();
-            xx=xx+10;
-            if (xx>600){
-                xx=10;
-                yy=yy+10;
-            }
-            i=1;
-            keystop();
+            cursy=cursy+10;
 
         }
         redraw();

@@ -12,6 +12,8 @@ int xxx=0;
 int yyy=0;
 int zzz=0;
 int video;
+int cursx=0;
+int cursy=0;
  char *keymap="==1234567890-===qwertyuiop5678asdfghjkl1234\\zxcvbnm,.;/9abc               ";
  volatile unsigned int *timerss;
 static double PI = 3.141592653589793;
@@ -6177,9 +6179,38 @@ void keystop(){
 
 
 }
+void inputs(char *c){
+    int indexs=0;
+    int ii=1;
+    int iii=1;
+    int i=0;
+        cursx=10;
+        while(iii){
+            c[indexs]=0;
+            c[indexs+1]=0;
+            i=inkeys();
+            if(i==10)break;
+            c[indexs]=i;
+            indexs++;
+            gputc(cursx,cursy,i);
+            redraw();
+            cursx=cursx+10;
+            keystop();
+         }
+        cursx=10;
+        cursy=cursy+10;
+
+
+}
+
+
+
 char  *starts(){
     keymap=(char *)"\033=1234567890-===qwertyuiop==\n=asdfghjkl====\\zxcvbnm,.;/                                                ";
     rdfs_start=(char *)rdfs_txt;
+    int cursx=10;
+    int cursy=10;
+
     return (char *)rdfs_start;
 
 }

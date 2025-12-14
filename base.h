@@ -6197,8 +6197,7 @@ void inputs(int cursxx,int cursyy,char *c){
             cursxx=cursxx+10;
             keystop();
          }
-        cursx=10;
-        cursyy=cursyy+10;
+        
 
 
 }

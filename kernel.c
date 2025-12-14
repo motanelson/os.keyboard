@@ -16,7 +16,8 @@ void kernel_main()
         cc=starts();
         
         while(1){
-            inputs(ci);
+            inputs(10,cursy,ci);
+            cursy=cursy+10;
             gputs(10,cursy,ci);
             redraw();
             cursy=cursy+10;

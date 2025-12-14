@@ -6179,12 +6179,12 @@ void keystop(){
 
 
 }
-void inputs(char *c){
+void inputs(int cursxx,int cursyy,char *c){
     int indexs=0;
     int ii=1;
     int iii=1;
     int i=0;
-        cursx=10;
+        cursxx=10;
         while(iii){
             c[indexs]=0;
             c[indexs+1]=0;
@@ -6192,13 +6192,13 @@ void inputs(char *c){
             if(i==10)break;
             c[indexs]=i;
             indexs++;
-            gputc(cursx,cursy,i);
+            gputc(cursxx,cursy,i);
             redraw();
-            cursx=cursx+10;
+            cursxx=cursxx+10;
             keystop();
          }
         cursx=10;
-        cursy=cursy+10;
+        cursyy=cursyy+10;
 
 
 }

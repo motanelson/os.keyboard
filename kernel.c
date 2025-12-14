@@ -14,13 +14,13 @@ void kernel_main()
         char c[1024];
         char *ci=c;
         cc=starts();
-        
+        int cursyy=10;
         while(1){
-            inputs(10,cursy,ci);
-            cursy=cursy+10;
-            gputs(10,cursy,ci);
+            inputs(10,cursyy,ci);
+            cursyy=cursyy+10;
+            gputs(10,cursyy,ci);
             redraw();
-            cursy=cursy+10;
+            cursyy=cursyy+10;
 
         }
         redraw();

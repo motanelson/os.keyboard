@@ -6192,7 +6192,7 @@ void inputs(int cursxx,int cursyy,char *c){
             if(i==10)break;
             c[indexs]=i;
             indexs++;
-            gputc(cursxx,cursy,i);
+            gputc(cursxx,cursyy,i);
             redraw();
             cursxx=cursxx+10;
             keystop();
